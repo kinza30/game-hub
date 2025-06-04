@@ -10,7 +10,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Bundler",  // <-- changed for Chakra UI
+    "moduleResolution": "node",  // <-- changed for Chakra UI
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
