@@ -14,9 +14,10 @@ import GameCardContainer from "./GameCardContainer";
 import { Genre } from "@/hooks/useGeneres";
 interface Props {
   onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-const GenereList = ({ onSelectGenre }: Props) => {
+const GenereList = ({ selectedGenre, onSelectGenre }: Props) => {
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const { data, isLoading, error } = useGenres();
   if (error) return null;
@@ -40,6 +41,7 @@ const GenereList = ({ onSelectGenre }: Props) => {
                 src={getCroppedImageUrl(genre.image_background)}
               />
               <Button
+                fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
                 onClick={() => onSelectGenre(genre)}
                 fontSize="lg"
                 variant="link"
