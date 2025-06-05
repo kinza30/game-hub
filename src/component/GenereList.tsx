@@ -9,7 +9,7 @@ import {
   Spinner,
   Text,
 } from "@chakra-ui/react";
-import GameCardSkeleton from "./gameCardSkeleton";
+import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 import { Genre } from "@/hooks/useGeneres";
 interface Props {
